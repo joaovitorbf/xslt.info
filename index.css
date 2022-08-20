@@ -58,6 +58,7 @@ button:active {
 .section>p {
     color: black;
     background-color: white;
+    padding-left: 3px;
 }
 
 .editor {

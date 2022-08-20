@@ -14,6 +14,7 @@ var loader = new ldloader({root: ".ldld.full"})
 
 window.transform = function () {
     loader.on()
+    outputeditor.setValue('')
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
