@@ -61,6 +61,9 @@ function transform() {
                     .then((final) => {
                         outputeditor.setValue(final.principalResult)
                     })
+                    .catch((e) => {
+                        errorToast(e.message)
+                    })
                 }).catch((e) => {
                     errorToast(e.message)
                 })
