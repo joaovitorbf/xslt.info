@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>xslt.info</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <p>xslt.info</p>
+        </div>
+        <div class="topleft section">
+            <p>XML</p>
+            <div id="xmlinput" class="editor"></div>
+        </div>
+        <div class="right section">
+            <p>XML OUTPUT</p>
+            <div id="xmloutput" class="editor"></div>
+            <button onclick="transform()">TRANSFORM</button>
+        </div>
+        <div class="bottomleft section">
+            <p>XSLT</p>
+            <div id="xsltinput" class="editor"></div>
+        </div>
+        <div class="footer">
+            <p>Made by João Fonsaka</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.9.6/ace.js"></script>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
