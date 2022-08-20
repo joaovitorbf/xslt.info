@@ -10,9 +10,9 @@ var xslteditor = ace.edit("xsltinput");
 xslteditor.setTheme("ace/theme/monokai");
 xslteditor.session.setMode("ace/mode/xml");
 
-var loader = new ldloader({root: ".ldld.full"})
+var loader = new ldloader({ root: ".ldld.full" })
 
-window.transform = function () {
+function transform() {
     loader.on()
     outputeditor.setValue('')
     var myHeaders = new Headers();
@@ -69,4 +69,19 @@ window.transform = function () {
             }).showToast();
             loader.off()
         })
+}
+
+function discord() {
+    Toastify({
+        text: `jvbf#0001`,
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "#7289da",
+            color: "	#ffffff"
+        },
+    }).showToast();
 }

@@ -98,6 +98,14 @@ button:active {
     align-items: center;
 }
 
+.footer>p {
+    margin-right: 20px;
+}
+
+.footer>p>a {
+    color: inherit;
+}
+
 .ldld {
     z-index: 999999;
 }
