@@ -12,6 +12,21 @@ xslteditor.session.setMode("ace/mode/xml");
 
 var loader = new ldloader({ root: ".ldld.full" })
 
+function errorToast(msg) {
+    Toastify({
+        text: `Error: "${msg}"`,
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "#f92672",
+            color: "#272822"
+        },
+    }).showToast();
+}
+
 function transform() {
     loader.on()
     outputeditor.setValue('')
@@ -33,40 +48,27 @@ function transform() {
         .then((res) => {
             if (res.status != 200) {
                 res.text().then((text) => {
-                    Toastify({
-                        text: `Error: "${text}"`,
-                        duration: 3000,
-                        close: true,
-                        gravity: "top", // `top` or `bottom`
-                        position: "right", // `left`, `center` or `right`
-                        stopOnFocus: true, // Prevents dismissing of toast on hover
-                        style: {
-                            background: "#f92672",
-                            color: "#272822"
-                        },
-                    }).showToast();
+                    errorToast(text)
                 })
             }
             else {
                 res.text().then((text) => {
-                    outputeditor.setValue(text)
+                    SaxonJS.transform({
+                        "stylesheetText": text,
+                        "sourceText": xmleditor.getValue(),
+                        "destination": "serialized"
+                    }, "async")
+                    .then((final) => {
+                        outputeditor.setValue(final.principalResult)
+                    })
+                }).catch((e) => {
+                    errorToast(e.message)
                 })
             }
             loader.off()
         })
         .catch((err) => {
-            Toastify({
-                text: `Backend server connection error.`,
-                duration: 3000,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                    background: "#f92672",
-                    color: "#272822"
-                },
-            }).showToast();
+            errorToast('Backend server connection error.')
             loader.off()
         })
 }
