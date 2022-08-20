@@ -25,6 +25,7 @@ button {
 	font-family:Arial;
 	padding:7px 31px;
 	text-decoration:none;
+    border-style: solid solid none none;
 }
 
 button:hover {
