@@ -34,7 +34,6 @@ function transform() {
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
     var urlencoded = new URLSearchParams();
-    urlencoded.append("xml", xmleditor.getValue());
     urlencoded.append("xslt", xslteditor.getValue());
 
     var requestOptions = {
