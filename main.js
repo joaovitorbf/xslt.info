@@ -29,7 +29,7 @@ function transform() {
         redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:8080/transform", requestOptions)
+    fetch("/transform", requestOptions)
         .then((res) => {
             if (res.status != 200) {
                 res.text().then((text) => {
