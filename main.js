@@ -58,7 +58,7 @@ function transform() {
                         "destination": "serialized"
                     }, "async")
                     .then((final) => {
-                        outputeditor.setValue(final.principalResult)
+                        outputeditor.setValue(xmlFormatter(final.principalResult))
                     })
                     .catch((e) => {
                         errorToast(e.message)
