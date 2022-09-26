@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Primary Meta Tags -->
+    <title>xslt.info</title>
+    <meta name="title" content="xslt.info">
+    <meta name="description" content="Test and debug your XSLT 3.0 stylesheets.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="xslt.info">
+    <meta property="og:description" content="Test and debug your XSLT 3.0 stylesheets.">
+    <meta property="og:image" content="https://xslt.info/preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="xslt.info">
+    <meta property="twitter:description" content="Test and debug your XSLT 3.0 stylesheets.">
+    <meta property="twitter:image" content="https://xslt.info/preview.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css"
+        integrity="sha512-k+xZuzf4IaGQK9sSDjaNyrfwgxBfoF++7u6Q0ZVUs2rDczx9doNZkYXyyQbnJQcMR4o+IjvAcIj69hHxiOZEig=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ldloader@3.0.1/index.min.css"
+        integrity="sha256-tP+wsPFYcxaAOpft70fHafBaUGAe15T8zGyG5paIJvc=" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/4.0.10/fxparser.min.js"
+        integrity="sha512-5bZWTKUHB729weDC1CIdxyjbr5ULm/upBAUgn/hEFjZ+o/KKi5z+h7o8jIRxmzot1kH71jeywx/xzt0/g89GxQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/xpath/xpath.css">
+</head>
+
+<body>
+    <div class="ldld full light"></div>
+    <div class="parent">
+        <div class="header">
+            <p>xslt.info</p>
+        </div>
+        <div class="topleft section">
+            <p>XPATH</p>
+            <input value="/root/*" />
+        </div>
+        <div class="right section">
+            <p>OUTPUT</p>
+            <div id="output" class="editor"></div>
+            <button onclick="transform()">TRANSFORM</button>
+        </div>
+        <div class="bottomleft section">
+            <p>XML</p>
+            <div id="xmlinput" class="editor"></div>
+        </div>
+        <div class="footer">
+            <p>Made by João Fonsaka</p>
+            <p><a href="https://github.com/joaovitorbf/xslt.info">GitHub</a></p>
+            <p><a href="javascript:discord()">Discord</a></p>
+        </div>
+    </div>
+    <script src="saxon/SaxonJS2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xml-formatter@2.6.1/dist/browser/xml-formatter-singleton.js"
+        integrity="sha256-F8NNnGCweYs8mSYHUhyrslOdjCLH6S/UhDy4laGychU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.9.6/ace.js"
+        integrity="sha512-czfWedq9cnMibaqVP2Sw5Aw1PTTabHxMuTOkYkL15cbCYiatPIbxdV0zwhfBZKNODg0zFqmbz8f7rKmd6tfR/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"
+        integrity="sha512-0Yc4Jv5wX4+mjDuLxmHFGqgDtMFAEBLpPq/0nPVmAOwHPMkYXiS1YVYWTcrVQztftk/32089DDTyrCJO8hBCZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ldloader@3.0.1/index.min.js"
+        integrity="sha256-XTNeCDTuTuBa0A9FadJlwgaxzJhpj5FBchuKkU1Y1sE=" crossorigin="anonymous"></script>
+    <script src="/xpath/xpath.js"></script>
+</body>
+
+</html>
