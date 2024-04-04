@@ -77,7 +77,7 @@ function transform() {
 
 function discord() {
     Toastify({
-        text: `jvbf#0001`,
+        text: `My username on Discord is jvbf, feel free to add me!`,
         duration: 3000,
         close: true,
         gravity: "top", // `top` or `bottom`
